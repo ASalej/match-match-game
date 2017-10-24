@@ -1,0 +1,7 @@
+<div class="card-container" [ngClass]="'flipped': isValueVisible">
+    <div #card class="card" 
+        (click)="onCardClicked()">
+        <figure class="front-side">1</figure>
+        <figure class="back-side">2</figure>
+    </div>
+</div>
