@@ -1,0 +1,6 @@
+<div>
+    <div (click)="onShowOptions()">{{ selectedOption }}</div>
+    <ul [ngClass]="{ 'show-options': isOptionsVisible }">
+        <li *ngFor="let option of options" (click)="onChangeOption(option)">{{ option }}</li>
+    </ul>
+</div>
