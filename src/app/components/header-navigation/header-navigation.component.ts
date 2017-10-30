@@ -5,9 +5,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
   templateUrl: '/header-navigation.component.html'
 })
 
-export class HeaderNavigation {
+export class HeaderNavigationComponent {
     @Output() changeDifficultyOption = new EventEmitter();
-    
+
     public onDifficultyOptionChanged(option: string) {
         this.changeDifficultyOption.emit(option);
     }

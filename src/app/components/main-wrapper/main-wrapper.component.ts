@@ -1,5 +1,5 @@
-import { Component, Output, ViewChild } from '@angular/core';
-import { GameBoard } from './../game-board/game-board.component';
+import { Component, ViewChild } from '@angular/core';
+import { GameBoardComponent } from './../game-board/game-board.component';
 
 @Component({
   selector: 'main-wrapper',
@@ -7,8 +7,8 @@ import { GameBoard } from './../game-board/game-board.component';
 })
 
 export class MainWrapperComponent {
-    @ViewChild(GameBoard) gameBoard: GameBoard;
-    
+    @ViewChild(GameBoardComponent) gameBoard: GameBoardComponent;
+
     public onDifficultyOptionChanged(option: string) {
         this.gameBoard.changeDifficultyOption(option);
     }

@@ -1,45 +1,22 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { uniqueId } from 'lodash';
+import { Card } from './card.structure';
 
 @Component({
-  selector: 'card',
-  templateUrl: '/card.component.html'
+    selector: 'card',
+    templateUrl: '/card.component.html'
 })
 
-export class Card {
-    private readonly id: number = parseInt(uniqueId());
-    private value: number = 0;
-    private skirt: number = 0;
-    
-    public isValueVisible: boolean = false;
-    public isValueGuessed: boolean = false;
-    
-    constructor(value: number, skirt: number) {
-        this.value = value;
-        this.skirt = skirt;
-    }
-    
-    @Output() onClickCard = new EventEmitter(); 
-    
-    public showCardValue(): number {
-        this.isValueVisible = true;
-        return this.value;
-    }
-    
-    public hideCard(): void {
-        this.isValueVisible = false;
-    }
-    
-    public getId(): number {
-        return this.id;
-    }
-    
-    public getValue(): number {
-        return this.value;
-    }
-    
+export class CardComponent {
+    @Input() skirt;
+    @Input() value;
+
+    @Output() cardClicked = new EventEmitter();
+
+    private card = new Card(this.value, this.skirt);
+
     public onCardClicked() {
-        this.isValueVisible = !this.isValueGuessed;
-        this.onClickCard.emit(this.getId());
+        this.card.isValueVisible = !this.card.isValueGuessed;
+        this.cardClicked.emit(this.card.getId());
     }
 }
