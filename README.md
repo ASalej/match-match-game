@@ -1,10 +1,12 @@
 # MatchMatchGame
 
+```
 `git clone https://github.com/ASalej/match-match-game.git`
 `npm  i`
-'npm run build'
-'npm start'
+`npm run build`
+`npm start`
 Open `http://localhost:4200/`
+```
 
 ## Development server
 
