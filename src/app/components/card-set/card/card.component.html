@@ -1,7 +1,6 @@
-<div class="card-container" [ngClass]="{'flipped': isValueVisible}">
-    <div #card class="card"
-        (click)="onCardClicked()">
-        <figure class="front-side">1</figure>
-        <figure class="back-side">2</figure>
+<div class="card-container">
+    <div class="card" [ngClass]="{flipped: card.isValueVisible}" (click)="onCardClicked()">
+        <figure class="front-side">skirt</figure>
+        <figure class="back-side">{{ card.getValue() }}</figure>
     </div>
 </div>

@@ -1,3 +1,6 @@
-<section class="card-set" *ngFor="let cardElement of cards">
-    <card [skirt]="cardElement.getSkirt()" [value]="cardElement.getValue()" (cardClicked)="cardClicked($event)"></card>
+<section class="card-set">
+    <card *ngFor="let cardElement of cards"
+          [card]="cardElement"
+          (cardClicked)="cardClicked($event)">
+    </card>
 </section>

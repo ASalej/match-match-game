@@ -1,8 +1,10 @@
-.card-container { 
-    width: 200px;
-    height: 260px;
+.card-container {
     position: relative;
-    perspective: 800px;
+    width: 70px;
+    height: 100px;
+    perspective: 400px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .card {
@@ -20,15 +22,18 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
+    text-align: center;
+    font-size: 40px;
+    line-height: 3;
 }
 
-.card .front {
-    /* skirt here */ 
-    background: red;
+.card .front-side {
+    /* skirt here */
+    background: darkcyan;
 }
-.card .back {
+.card .back-side {
     /* value here */
-    background: blue;
+    background: #77dcdc;
     transform: rotateY( 180deg );
 }
 
