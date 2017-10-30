@@ -1,5 +1,11 @@
 # MatchMatchGame
 
+`git clone https://github.com/ASalej/match-match-game.git`
+`npm  i`
+'npm run build'
+'npm start'
+Open `http://localhost:4200/`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
