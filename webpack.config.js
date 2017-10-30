@@ -4,7 +4,7 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        'my-app': './src/my-app/app.ts'
+        'my-app': './src/main.ts'
     },
 
     output: {
@@ -20,6 +20,9 @@ module.exports = {
     devtool: 'source-map',
 
     module: {
+        preLoaders: [
+            { exclude: /node_modules/, loader: 'tslint', test: /\.ts$/ }
+        ],
         loaders: [
             { test: /\.css$/, loader: "style-loader!css-loader" },
         ]
