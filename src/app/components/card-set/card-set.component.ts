@@ -29,7 +29,6 @@ export class CardSetComponent implements OnChanges {
 
     public shuffleCards(): void {
         this.cards.sort(() => {
-            // console.log(a, b)
             return Math.random() > 0.5 ? -1 : 1;
         });
     }
@@ -67,7 +66,7 @@ export class CardSetComponent implements OnChanges {
     }
 
     private isAllCardsGuessed(): boolean {
-        return this.cards.some(card => card.isValueGuessed);
+        return this.cards.every(card => card.isValueGuessed);
     }
 
 

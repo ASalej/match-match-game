@@ -20,7 +20,7 @@ export class GameBoardComponent {
 
     public changeDifficultyOption(option: string) {
         if (this.difficulty !== option) {
-            switch(option) {
+            switch (option) {
                 case 'Easy':
                     this.cardsCount = 10;
                     break;
@@ -35,5 +35,9 @@ export class GameBoardComponent {
             this.difficulty = option;
 
         }
+    }
+
+    public onWinGame() {
+        console.log('the end');
     }
 }
