@@ -1,6 +1,1 @@
-<div class="card-container">
-    <div class="card" [ngClass]="{flipped: card.isValueVisible}" [ngStyle]="{'opacity': card.isValueGuessed ? 0 : 1}" (click)="onCardClicked()">
-        <figure class="front-side">skirt</figure>
-        <figure class="back-side">{{ card.getValue() }}</figure>
-    </div>
-</div>
+<div class="card-container">    <div class="card" [ngClass]="{flipped: card.isValueVisible}" [ngStyle]="{'opacity': card.isValueGuessed ? 0 : 1}" (click)="onCardClicked()">        <figure class="front-side">skirt</figure>        <figure class="back-side">{{ card.getValue() }}            <img src="{{'images/' + card.getValue() + '.png' }}">        </figure>    </div></div>
